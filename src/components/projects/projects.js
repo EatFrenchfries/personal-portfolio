@@ -4,6 +4,7 @@ import { Col, Container, Row, Tab } from 'react-bootstrap'
 import ProjectCard from './project-card'
 import colorSharp2 from '../../assets/images/color-sharp2.png'
 import project1 from '../../assets/images/nogi-shop.png'
+import project2 from '../../assets/images/fries-chat.png'
 
 import './projects.css'
 
@@ -15,9 +16,9 @@ const Projects = () => {
       imgUrl: project1
     },
     {
-      title: 'Nogizaka46 Web Shop',
+      title: 'Fries Chat',
       description: 'This project is hosting on the netlify.',
-      imgUrl: project1
+      imgUrl: project2
     },
     {
       title: 'Nogizaka46 Web Shop',
