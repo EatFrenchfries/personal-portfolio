@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 
 import logo from '../../assets/images/Jiarong.svg'
-import navIcon1 from '../../assets/images/nav-icon1.svg'
+import navIcon1 from '../../assets/images/github.svg'
 import navIcon2 from '../../assets/images/nav-icon2.svg'
 import navIcon3 from '../../assets/images/nav-icon3.svg'
 
@@ -55,7 +55,7 @@ const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
+              <a href="https://github.com/EatFrenchfries">
                 <img src={navIcon1} alt="" />
               </a>
               <a href="#">

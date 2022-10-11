@@ -13,17 +13,20 @@ const Projects = () => {
     {
       title: 'Nogizaka46 Web Shop',
       description: 'This project is hosting on the netlify.',
-      imgUrl: project1
+      imgUrl: project1,
+      link: 'https://sunny-melba-a8870b.netlify.app/'
     },
     {
       title: 'Fries Chat',
       description: 'This project is hosting on the netlify.',
-      imgUrl: project2
+      imgUrl: project2,
+      link: 'https://boisterous-griffin-9ca74c.netlify.app/'
     },
     {
       title: 'Nogizaka46 Web Shop',
       description: 'This project is hosting on the netlify.',
-      imgUrl: project1
+      imgUrl: project1,
+      link: 'https://sunny-melba-a8870b.netlify.app/'
     }
   ]
 

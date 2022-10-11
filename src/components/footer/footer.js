@@ -1,7 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap'
 
 import logo from '../../assets/images/Jiarong.svg'
-import navIcon1 from '../../assets/images/nav-icon1.svg'
+import navIcon1 from '../../assets/images/github.svg'
 import navIcon2 from '../../assets/images/nav-icon2.svg'
 import navIcon3 from '../../assets/images/nav-icon3.svg'
 
@@ -17,13 +17,13 @@ const Footer = () => {
           </Col>
           <Col sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="">
+              <a href="https://github.com/EatFrenchfries">
                 <img src={navIcon1} />
               </a>
-              <a href="">
+              <a href="#">
                 <img src={navIcon2} />
               </a>
-              <a href="">
+              <a href="#">
                 <img src={navIcon3} />
               </a>
             </div>
