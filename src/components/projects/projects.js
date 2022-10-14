@@ -5,6 +5,7 @@ import ProjectCard from './project-card'
 import colorSharp2 from '../../assets/images/color-sharp2.png'
 import project1 from '../../assets/images/nogi-shop.png'
 import project2 from '../../assets/images/fries-chat.png'
+import project3 from '../../assets/images/bank-home-page.png'
 
 import './projects.css'
 
@@ -23,10 +24,10 @@ const Projects = () => {
       link: 'https://boisterous-griffin-9ca74c.netlify.app/'
     },
     {
-      title: 'Nogizaka46 Web Shop',
+      title: 'Bank home page',
       description: 'This project is hosting on the netlify.',
-      imgUrl: project1,
-      link: 'https://sunny-melba-a8870b.netlify.app/'
+      imgUrl: project3,
+      link: 'https://timely-blancmange-771d38.netlify.app/'
     }
   ]
 
