@@ -39,7 +39,7 @@ const Skills = () => {
               <h2>Skills</h2>
               <p>Try to be better every single day.</p>
               <br></br>
-              <Carousel responsive={responsive} infinite={true} className="skill-slider">
+              <Carousel responsive={responsive} infinite={true} className="skill-slider" autoPlay={true} transitionDuration={500}>
                 <div className="item">
                   <img src={meter1} alt="image" />
                   <h5>HTML</h5>

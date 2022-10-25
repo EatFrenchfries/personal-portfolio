@@ -26,10 +26,27 @@ const Contact = () => {
   const handleSubmit = e => {
     e.preventDefault()
     setButtonText('Sending...')
-    // fetch("")
-    setButtonText('Send')
-    setFormDetails(formInitialDetails)
-    setStatus({ success: true, message: 'Message send successfully.' })
+    window.Email.send({
+      SecureToken: `${process.env.REACT_APP_SECURE_TOKEN}`,
+      To: `${process.env.REACT_APP_EMAIL_USER}`,
+      From: `${process.env.REACT_APP_EMAIL_USER}`,
+      Subject: 'New Contact From Portfolio',
+      Body: `<p>Name: ${formDetails.name}</p>
+      <p>Email: ${formDetails.email}</p>
+      <p>Message: ${formDetails.message}</p>`
+    })
+      .then(message => {
+        if (message === 'OK') {
+          setStatus({ success: true, message: 'Message send successfully.' })
+        } else {
+          setStatus({ success: false, message: 'Something went wrong.' })
+        }
+      })
+      .catch(err => setStatus({ success: false, message: 'Something went wrong.' }))
+      .finally(() => {
+        setButtonText('Send')
+        setFormDetails(formInitialDetails)
+      })
   }
 
   useEffect(() => {
@@ -53,14 +70,14 @@ const Contact = () => {
             <form onSubmit={handleSubmit}>
               <Row>
                 <Col sm={6} className="px-1">
-                  <input type="text" value={formDetails.name} placeholder="Name" onChange={e => onFormUpdate('name', e.target.value)} />
+                  <input type="text" value={formDetails.name} placeholder="Name" onChange={e => onFormUpdate('name', e.target.value)} required />
                 </Col>
                 <Col sm={6} className="px-1">
-                  <input type="email" value={formDetails.email} placeholder="E-mail" onChange={e => onFormUpdate('email', e.target.value)} />
+                  <input type="email" value={formDetails.email} placeholder="E-mail" onChange={e => onFormUpdate('email', e.target.value)} required />
                 </Col>
                 <Col sm={12}>
-                  <textarea row="6" value={formDetails.message} placeholder="Message" onChange={e => onFormUpdate('message', e.target.value)} />
-                  <button type="submit">
+                  <textarea row="6" value={formDetails.message} placeholder="Message" onChange={e => onFormUpdate('message', e.target.value)} required />
+                  <button type="submit" disabled={buttonText !== 'Send'}>
                     <span>{buttonText}</span>
                   </button>
                 </Col>
